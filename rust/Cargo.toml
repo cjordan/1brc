@@ -1,0 +1,20 @@
+[package]
+name = "one-brc"
+version = "0.1.0"
+edition = "2021"
+license = "Unlicense"
+
+[features]
+default = []
+timings = []
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+
+[dependencies]
+bstr = "1.9.0"
+memchr = "2.7.1"
+memmap2 = "0.9.4"
+rustc-hash = "1.1.0"
